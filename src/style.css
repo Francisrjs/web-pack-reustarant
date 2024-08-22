@@ -1,0 +1,11 @@
+body {
+    background-color: #F3EEEA;
+    
+  }
+.nav{
+  display: flex;
+  padding: 5px;
+  justify-content:center;
+  gap: 150px;
+  align-items: center;
+}
