@@ -8,4 +8,43 @@ body {
   justify-content:center;
   gap: 150px;
   align-items: center;
+  background-color: #EBE3D5;
+  color:black;
+  font-weight: bold;
 }
+.titleContainer{
+  display: flex;
+  height: 30em;
+  width: 100%;
+  background-size: cover;
+  justify-content: center;
+  background-position: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  gap: 130px;
+  
+}
+.textTitleContainer h1 {
+  
+  font-size: 3em; 
+  font-family: "Comfortaa", sans-serif;
+  font-size: bold;
+
+}
+.textTitleContainer p{
+  margin-top: 1em;
+  font-family: "Comfortaa", sans-serif;
+  font-size: 1em;
+}
+h2 {
+  background-color: #EBE3D5;
+  width: 100%;
+  text-align: center;
+  font-size: 1.75em;
+}
+/* .imgTitle{
+  width:50%;
+
+
+} */

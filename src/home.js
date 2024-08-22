@@ -4,15 +4,25 @@ import home from "./img/home.jpg";
 import letter from "./img/letter.jpg";
 function Title(){
     const title=document.createElement("h1");
-    const imgTitle=document.createElement("img");
-    imgTitle.src=home;
-    imgTitle.className="imgTitle";
-    title.innerHTML="Creando recetas magicas..";
+    // const imgTitle=document.createElement("img");
+    // imgTitle.src=home;
+    // imgTitle.className="imgTitle";
+    title.innerHTML="El mejor cafe de la ciudad..";
     const description=document.createElement("p");
     description.innerHTML="reserva en nuestra web";
-    document.body.appendChild(title);
-    document.body.appendChild(description);
-    document.body.appendChild(imgTitle);
+    const titleContainer=document.createElement("div");
+    titleContainer.className="titleContainer";
+    const titleTextContainer=document.createElement("div");
+    titleTextContainer.className="textTitleContainer";
+    titleTextContainer.appendChild(title);
+    titleTextContainer.appendChild(description);
+    titleContainer.appendChild(titleTextContainer)
+    // titleContainer.appendChild(imgTitle);
+    titleContainer.style.backgroundImage = `linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),url(${home})`;
+    document.body.appendChild(titleContainer);
 }
 function Home() {
     const containerMain = document.createElement("div");
@@ -33,7 +43,7 @@ function Home() {
     p.innerHTML = "con muchos combos en nuestra carta.";
 
     const containerText = document.createElement("div");
-    containerText.appendChild(h2);
+    document.body.appendChild(h2);
     containerText.appendChild(p);
 
     // Junto los dos container
