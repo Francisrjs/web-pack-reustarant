@@ -1,6 +1,6 @@
 body {
     background-color: #F3EEEA;
-    
+    font-family: "Comfortaa", sans-serif;
   }
 .nav{
   display: flex;
@@ -37,14 +37,39 @@ body {
   font-family: "Comfortaa", sans-serif;
   font-size: 1em;
 }
-h2 {
-  background-color: #EBE3D5;
+h2,h4 {
+  background-color: #ebe3d5fc;
   width: 100%;
   text-align: center;
   font-size: 1.75em;
+}
+h4{
+  background-color: #B0A695;
 }
 /* .imgTitle{
   width:50%;
 
 
 } */
+ .mainC {
+  width: 30em;
+  margin-top: 10px;
+  border: 1px solid black;
+ }
+.mainC div{
+  display: flex;
+  align-items: center;
+
+  
+}
+.mainC img{
+  padding-right:20px;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+ 
+}

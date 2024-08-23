@@ -2,14 +2,17 @@ import { add } from "lodash";
 import coffe from "./img/coffe.jpg";
 import home from "./img/home.jpg";
 import letter from "./img/letter.jpg";
+import restaurant from "./img/restaurant.jpg"
+import reserve from "./img/reserve.jpg"
+const content=document.getElementById("content");
 function Title(){
     const title=document.createElement("h1");
     // const imgTitle=document.createElement("img");
     // imgTitle.src=home;
     // imgTitle.className="imgTitle";
-    title.innerHTML="El mejor cafe de la ciudad..";
+    title.innerHTML="The best coffee in town..";
     const description=document.createElement("p");
-    description.innerHTML="reserva en nuestra web";
+    description.innerHTML="book on our website";
     const titleContainer=document.createElement("div");
     titleContainer.className="titleContainer";
     const titleTextContainer=document.createElement("div");
@@ -23,6 +26,10 @@ function Title(){
       rgba(0, 0, 0, 0.5)
     ),url(${home})`;
     document.body.appendChild(titleContainer);
+    //down title
+    const h4 = document.createElement("h4");
+    h4.innerHTML="The best options";
+    document.body.appendChild(h4);
 }
 function Home() {
     const containerMain = document.createElement("div");
@@ -37,24 +44,40 @@ function Home() {
     divCart.appendChild(img);
 
     const h2 = document.createElement("h2");
-    h2.innerHTML = "Disfruta el mejor desayuno..";
+    h2.innerHTML = "Enjoy the best breakfast..";
 
     const p = document.createElement("p");
-    p.innerHTML = "con muchos combos en nuestra carta.";
+    p.innerHTML = "with many combos in our menu.";
 
     const containerText = document.createElement("div");
-    document.body.appendChild(h2);
+    containerMain.appendChild(h2);
     containerText.appendChild(p);
 
     // Junto los dos container
-    containerMain.appendChild(divCart);
-    containerMain.appendChild(containerText);
-    document.body.appendChild(containerMain);
+    const container = document.createElement("div");
+    container.appendChild(divCart);
+    container.appendChild(containerText);
+    containerMain.appendChild(container);
+    //put in content
+    content.appendChild(containerMain);
+    document.body.appendChild(content);
+    
 
     // Retorno de elementos importantes
     return { h2, p, img };
 }
-
+function Direction(){
+    const homeElements = Home();
+    homeElements.h2.innerHTML="Visit us";
+    homeElements.p.innerHTML="Jamaica 303";
+    homeElements.img.src=restaurant;
+}
+function Reserve(){
+    const homeElements = Home();
+    homeElements.h2.innerHTML="Reserve";
+    homeElements.p.innerHTML="Click Here";
+    homeElements.img.src=reserve;
+}
 function Menu() {
     const homeElements = Home();
     homeElements.h2.innerHTML = "Carta";
@@ -91,4 +114,4 @@ function Menu() {
 }
 
 
-export { Home, Menu, Title};
+export { Home, Menu,Direction,Reserve, Title};
