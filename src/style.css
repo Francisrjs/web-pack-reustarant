@@ -12,6 +12,10 @@ body {
   color:black;
   font-weight: bold;
 }
+.active{
+  color:#776B5D;
+  
+}
 .titleContainer{
   display: flex;
   height: 30em;

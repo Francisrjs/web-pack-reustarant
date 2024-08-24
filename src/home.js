@@ -5,7 +5,9 @@ import letter from "./img/letter.jpg";
 import restaurant from "./img/restaurant.jpg"
 import reserve from "./img/reserve.jpg"
 const content=document.getElementById("content");
-function Title(){
+const homeButton=document.getElementById("home");
+homeButton.className="active";
+function TitleContent(){
     const title=document.createElement("h1");
     // const imgTitle=document.createElement("img");
     // imgTitle.src=home;
@@ -15,8 +17,11 @@ function Title(){
     description.innerHTML="book on our website";
     const titleContainer=document.createElement("div");
     titleContainer.className="titleContainer";
+    titleContainer.id="titleContainer";
     const titleTextContainer=document.createElement("div");
+    
     titleTextContainer.className="textTitleContainer";
+    titleTextContainer.id="textTitleContainer";
     titleTextContainer.appendChild(title);
     titleTextContainer.appendChild(description);
     titleContainer.appendChild(titleTextContainer)
@@ -28,10 +33,11 @@ function Title(){
     document.body.appendChild(titleContainer);
     //down title
     const h4 = document.createElement("h4");
+    h4.id="h4";
     h4.innerHTML="The best options";
     document.body.appendChild(h4);
 }
-function Home() {
+function HomeContent() {
     const containerMain = document.createElement("div");
     containerMain.className="mainC";
     const divCart = document.createElement("div");
@@ -66,20 +72,20 @@ function Home() {
     // Retorno de elementos importantes
     return { h2, p, img };
 }
-function Direction(){
-    const homeElements = Home();
+function DirectionContent(){
+    const homeElements = HomeContent();
     homeElements.h2.innerHTML="Visit us";
     homeElements.p.innerHTML="Jamaica 303";
     homeElements.img.src=restaurant;
 }
-function Reserve(){
-    const homeElements = Home();
+function ReserveContent(){
+    const homeElements = HomeContent();
     homeElements.h2.innerHTML="Reserve";
     homeElements.p.innerHTML="Click Here";
     homeElements.img.src=reserve;
 }
-function Menu() {
-    const homeElements = Home();
+function MenuContent() {
+    const homeElements = HomeContent();
     homeElements.h2.innerHTML = "Carta";
     homeElements.p.innerHTML = ""; // Limpiamos el contenido para agregar las líneas del menú
     homeElements.p.className="hola";
@@ -114,4 +120,5 @@ function Menu() {
 }
 
 
-export { Home, Menu,Direction,Reserve, Title};
+
+export { HomeContent,DirectionContent,ReserveContent, TitleContent, MenuContent};
