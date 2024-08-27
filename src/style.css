@@ -46,6 +46,7 @@ h2,h4 {
   width: 100%;
   text-align: center;
   font-size: 1.75em;
+  border: 3px solid;
 }
 h4{
   background-color: #B0A695;

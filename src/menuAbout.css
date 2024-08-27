@@ -1,0 +1,14 @@
+#divCart{
+    width: 70em;
+    align-items: center;
+    margin-top: 50px;
+}
+#divCart h2 {
+    font-size: 50px;
+}
+.menu{
+    text-align: center;
+    
+    font-size: 35px;
+    
+}

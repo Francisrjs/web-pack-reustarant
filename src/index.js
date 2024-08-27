@@ -2,6 +2,7 @@
 console.log("hola web");
 import "./style.css";
 import "./reset.css"
+import "./menuAbout.css"
 import {DirectionContent, HomeContent,ReserveContent, TitleContent, MenuContent} from './home.js'
 import { } from "./menu.js";
 import { functionsIn, set } from "lodash";

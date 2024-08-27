@@ -70,7 +70,7 @@ function HomeContent() {
     
 
     // Retorno de elementos importantes
-    return { h2, p, img };
+    return { h2, p, img, containerMain };
 }
 function DirectionContent(){
     const homeElements = HomeContent();
@@ -86,11 +86,12 @@ function ReserveContent(){
 }
 function MenuContent() {
     const homeElements = HomeContent();
-    homeElements.h2.innerHTML = "Carta";
+    homeElements.h2.innerHTML = "Letter";
     homeElements.p.innerHTML = ""; // Limpiamos el contenido para agregar las líneas del menú
-    homeElements.p.className="hola";
+    homeElements.p.className="menu";
     homeElements.img.src=letter;
     homeElements.img.className="imgLetter";
+    homeElements.containerMain.id="divCart"
     function addMenu(product, price) {
         const maxLength = 30; // Longitud máxima para el nombre del producto y el espacio
 
