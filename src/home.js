@@ -119,7 +119,15 @@ function MenuContent() {
     
     return homeElements;
 }
+function AboutContent(){
+    const homeElements = HomeContent();
+    homeElements.h2.innerHTML="Best Coffe";
+    homeElements.p.innerHTML="En nuestra cafetería, cada taza es un viaje a los mejores cafetales del mundo. Con granos seleccionados a mano y tostados a la perfección, ofrecemos una experiencia única que deleitará tu paladar. Nuestra pasión por el café se refleja en cada sorbo, garantizando un sabor inigualable y una calidad superior.";
+    homeElements.p.className="about";
+    homeElements.containerMain.id="aboutCart"
+    homeElements.img.src=restaurant;
+}
 
 
 
-export { HomeContent,DirectionContent,ReserveContent, TitleContent, MenuContent};
+export { HomeContent,DirectionContent,ReserveContent, TitleContent, MenuContent, AboutContent};

@@ -3,7 +3,7 @@ console.log("hola web");
 import "./style.css";
 import "./reset.css"
 import "./menuAbout.css"
-import {DirectionContent, HomeContent,ReserveContent, TitleContent, MenuContent} from './home.js'
+import {DirectionContent, HomeContent,ReserveContent, TitleContent, MenuContent, AboutContent} from './home.js'
 import { } from "./menu.js";
 import { functionsIn, set } from "lodash";
 function clearContent(){
@@ -38,6 +38,7 @@ function setupNav(){
     const about= document.getElementById("about");
     about.addEventListener("click", ()=>{
         clearContent();
+        AboutContent();
         console.log("about");
     })
 

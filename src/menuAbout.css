@@ -8,7 +8,14 @@
 }
 .menu{
     text-align: center;
-    
-    font-size: 35px;
-    
+    font-size: 35px;   
+}
+#aboutCart{
+    width: 70em;
+    align-items: center;
+    margin-top: 50px;
+}
+.about{
+    text-align: center;
+    font-size: 30px;   
 }
